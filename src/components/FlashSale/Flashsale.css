@@ -1,0 +1,139 @@
+.flashsale {
+  width: 100%;
+  padding: 32px 36px;
+  background: #faf9ff;
+}
+
+.main-cont {
+  width: 100%;
+  /* max-width: 1280px; */
+  margin: 0 auto;
+}
+
+.flbox {
+  min-height: 185px;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(110deg, #225dcc, #0754ca);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.flalert {
+  color: #fff;
+}
+
+.sale-label {
+  display: inline-block;
+  padding: 9px 17px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  background: #dc241f;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.flalert h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.flalert p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.time-box {
+  width: 64px;
+  height: 80px;
+  border-radius: 9px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box span {
+  color: #0754ca;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.time-box small {
+  color: #0754ca;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.separator {
+  color: #fff;
+  font-size: 20px;
+}
+
+.claim-btn {
+  height: 68px;
+  min-width: 208px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 17px;
+  background: #fff;
+  color: #0754ca;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.claim-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .flbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .countdown {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .flashsale {
+    padding: 24px 16px;
+  }
+
+  .flbox {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .countdown {
+    gap: 7px;
+  }
+
+  .time-box {
+    width: 55px;
+    height: 70px;
+  }
+
+  .claim-btn {
+    min-width: 170px;
+    margin-left: 0;
+  }
+}
