@@ -1,0 +1,75 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  transition: transform 0.4s ease;
+}
+.slider-item {
+  flex: 0 0 calc((100% - 48px) / 4);
+  min-width: 0;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #172036;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.slider-btn:hover {
+  background: #f5f5f5;
+}
+.slider-btn.prev {
+  left: 10px;
+}
+.slider-btn.next {
+  right: 10px;
+}
+.slider-btn svg {
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 1000px) {
+  .slider-track {
+    gap: 16px;
+  }
+  .slider-item {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .slider-track {
+    gap: 12px;
+  }
+  .slider-item {
+    flex: 0 0 100%;
+  }
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .slider-btn.prev {
+    left: 8px;
+  }
+  .slider-btn.next {
+    right: 8px;
+  }
+}

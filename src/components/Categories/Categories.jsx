@@ -1,25 +1,28 @@
-import './Categories.css';
-import AccessoriesImage from './Images/Accessories.png';
-import ApparelImage from './Images/Apparel.png';
-import ElectronicsImage from './Images/Electronics.png';
-import FootwearImage from './Images/Footwear.png';
+import "./Categories.css";
+import Slider from "../Slider/Slider";
+import CategoryCard from "../CategoryCard/CategoryCard";
+
+import AccessoriesImage from "./Images/Accessories.png";
+import ApparelImage from "./Images/Apparel.png";
+import ElectronicsImage from "./Images/Electronics.png";
+import FootwearImage from "./Images/Footwear.png";
 
 function Categories() {
   const categories = [
     {
-      name: 'Apparel',
+      name: "Apparel",
       image: ApparelImage
     },
     {
-      name: 'Accessories',
+      name: "Accessories",
       image: AccessoriesImage
     },
     {
-      name: 'Electronics',
+      name: "Electronics",
       image: ElectronicsImage
     },
     {
-      name: 'Footwear',
+      name: "Footwear",
       image: FootwearImage
     }
   ];
@@ -31,17 +34,15 @@ function Categories() {
         <a href="/categories">View All</a>
       </div>
 
-      <div className="categories-images">
+      <Slider>
         {categories.map((category) => (
-          <div className="category-card" key={category.name}>
-            <img src={category.image} alt={category.name} />
-
-            <div className="category-overlay">
-              <span>{category.name}</span>
-            </div>
-          </div>
+          <CategoryCard
+            key={category.name}
+            name={category.name}
+            image={category.image}
+          />
         ))}
-      </div>
+      </Slider>
     </section>
   );
 }
