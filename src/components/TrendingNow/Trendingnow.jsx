@@ -1,8 +1,11 @@
 import './trendingnow.css';
 import EssentialCrew from './Images/EssentialCrewneck.png';
 import CeramicTumbler from './Images/CeramicTumbler.png';
+import { useState } from 'react';
+import { Target } from 'lucide-react';
 
 function Trendingnow() {
+  const [wish,setWish] = useState();
   const Products = [
     {
       name: 'Essential Crewneck',
@@ -31,6 +34,10 @@ function Trendingnow() {
     }
   ];
 
+  function handleWish(){
+    useState()
+  }
+
   return (
     <section className="trending-now">
       <h2 className="trending-heading">Trending Now</h2>
@@ -52,7 +59,7 @@ function Trendingnow() {
                 alt={product.name}
               />
 
-              <button className="wishlist-btn" aria-label="Add to wishlist">
+              <button className="wishlist-btn" aria-label="Add to wishlist" onClick={handleWish()}>
                 ♡
               </button>
 

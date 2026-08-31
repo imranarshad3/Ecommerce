@@ -4,7 +4,6 @@
 
 .hero-section {
   width: 100%;
-  /* max-width: 1280px; */
   min-height: 632px;
   margin: 0 auto;
   display: flex;
@@ -50,16 +49,13 @@
   font-weight: 500;
   margin-bottom: 19px;
 }
- .collection-text {
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0px;
 
-
+.collection-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
 }
-
-
 
 .collection-tag img {
   width: 14px;
@@ -70,26 +66,26 @@ letter-spacing: 0px;
 .heading h1 {
   margin: 0;
   color: #17203a;
-  font-size:  64px;
+  font-size: 64px;
   line-height: 1.14;
   font-weight: 400;
   letter-spacing: -1.8px;
 }
 
 .hero-description {
-font-weight: 400;
-font-size: 20px;
-line-height: 32px;
-letter-spacing: 0px; 
-width: 576px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  width: 576px;
 }
 
 .buttons {
-    display: flex;
-    gap: 16px;
-    height: 72px;
-    padding-top: 16px;
-    width: 588px;
+  display: flex;
+  gap: 16px;
+  height: 72px;
+  padding-top: 16px;
+  width: 588px;
 }
 
 #sp-collection {

@@ -1,18 +1,26 @@
 import "./Header.css";
+import { useState } from "react";
 import profileImage from "./Images/Profile.png";
-import containerImage from "./Images/Container.png";
-import iconImage from "./Images/Icon.png";
+import { Search, Heart, ShoppingBag, Menu, X } from "lucide-react";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="announcement-bar">
-        Free worldwide shipping over $100 — use code stitch20 for 20% off
+        <p>Free worldwide shipping over $100 — use code stitch20 for 20% off</p>
       </div>
 
       <nav className="navbar">
         <div className="navbar-container">
-          <div className="logo">STITCH</div>
+          <div className="logo">
+            <span>STITCH</span>
+          </div>
 
           <div className="nav-links">
             <a href="/">New Arrivals</a>
@@ -23,26 +31,64 @@ function Header() {
           </div>
 
           <div className="search-box">
-            <span className="search-icon">⌕</span>
+            <Search className="search-icon" />
             <input type="text" placeholder="Search..." />
           </div>
 
           <div className="nav-actions">
-            <div className="wishlist">
-              <img src={containerImage} alt="Wishlist" />
-            </div>
+            <button className="wishlist" aria-label="Wishlist">
+              <Heart className="nav-icon" />
+              <span className="wishlist-badge">2</span>
+            </button>
 
-            <div className="profile">
+            <button className="profile" aria-label="Profile">
               <img src={profileImage} alt="Profile" />
-            </div>
+            </button>
 
-            <div className="cart">
-              <img src={iconImage} alt="Shopping bag" />
-              <span className="badge">3</span>
-            </div>
+            <button className="cart" aria-label="Shopping cart">
+              <ShoppingBag className="nav-icon" />
+              <span className="cart-badge">3</span>
+            </button>
+
+            <button
+              className="menu-button"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu className="menu-icon" />
+            </button>
           </div>
         </div>
       </nav>
+
+      <div
+        className={`offcanvas-overlay ${menuOpen ? "active" : ""}`}
+        onClick={closeMenu}
+      />
+
+      <aside className={`offcanvas ${menuOpen ? "active" : ""}`}>
+        <div className="offcanvas-header">
+          <div className="logo">
+            <span>STITCH</span>
+          </div>
+
+          <button
+            className="close-button"
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            <X />
+          </button>
+        </div>
+
+        <div className="offcanvas-links">
+          <a href="/" onClick={closeMenu}>New Arrivals</a>
+          <a href="/men" onClick={closeMenu}>Men</a>
+          <a href="/women" onClick={closeMenu}>Women</a>
+          <a href="/accessories" onClick={closeMenu}>Accessories</a>
+          <a href="/sale" onClick={closeMenu}>Sale</a>
+        </div>
+      </aside>
     </header>
   );
 }

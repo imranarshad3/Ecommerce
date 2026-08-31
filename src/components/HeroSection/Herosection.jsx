@@ -12,8 +12,8 @@ function Herosection() {
         <div className="hero-text">
           <div className="heading">
             <button className="collection-tag">
-              <img src={iconImage} alt="" />
-              <span className='collection-text'>New Autumn Collection 2026</span>
+              <img src={iconImage} alt="" width="14" height="14" />
+              <span className="collection-text">New Autumn Collection 2026</span>
             </button>
 
             <h1>
@@ -31,12 +31,10 @@ function Herosection() {
             </p>
 
             <div className="buttons">
-              <button id="sp-collection">
-                Shop Autumn Collection
-              </button>
+              <button id="sp-collection">Shop Autumn Collection</button>
 
               <button id="w-lookbook">
-                <img src={Playbtn} alt="" />
+                <img src={Playbtn} alt="" width="16" height="16" />
                 <span>Watch Lookbook</span>
               </button>
             </div>
@@ -48,6 +46,11 @@ function Herosection() {
             className="hero-main-image"
             src={backHero}
             alt="Autumn collection"
+            width="700"
+            height="490"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
 
           <div className="busycard">
@@ -55,6 +58,8 @@ function Herosection() {
               className="product-image"
               src={Cortimage}
               alt="Merino Wool Trench"
+              width="50"
+              height="54"
             />
 
             <div className="cardtext">
@@ -63,7 +68,7 @@ function Herosection() {
             </div>
 
             <button id="buybtn">
-              <img src={buyIcon} alt="Buy" />
+              <img src={buyIcon} alt="Buy" width="17" height="17" />
             </button>
           </div>
         </div>
