@@ -1,12 +1,12 @@
 .categories-section {
   width: 100%;
-  padding: 32px;
+  padding: 2rem;
   background: #fff;
 }
 
 .categories-header {
   width: 100%;
-  margin: 0 auto 22px;
+  margin: 0 auto 1.375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 
 .categories-header h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #151515;
 }
@@ -22,22 +22,21 @@
 .categories-header a {
   color: #0055cc;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
-
 .categories-images {
   width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   overflow: hidden;
 }
 
 .category-card {
   position: relative;
-  flex: 0 0 calc((100% - 60px) / 4);
-  height: 385px;
+  width: 100%;
+  height: 24rem;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -58,7 +57,7 @@
   inset: 0;
   display: flex;
   align-items: flex-end;
-  padding: 20px;
+  padding: 1.25rem;
   background: linear-gradient(
     to top,
     rgba(10, 15, 25, 0.65),
@@ -68,36 +67,48 @@
 
 .category-overlay span {
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-@media (max-width: 1000px) {
-  .categories-images {
-    gap: 16px;
-  }
-
-  .category-card {
-    flex: 0 0 calc((100% - 16px) / 2);
-  }
-}
-
-@media (max-width: 600px) {
+/* Tablet */
+@media (max-width: 62.5rem) {
   .categories-section {
-    padding: 28px 16px;
-  }
-
-  .categories-images {
-    gap: 16px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .categories-images::-webkit-scrollbar {
-    display: none;
+    padding: 1.75rem;
   }
 
   .category-card {
-    flex: 0 0 280px;
-    height: 300px;
+    height: 20rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+  .categories-section {
+    padding: 1.75rem 1rem;
+  }
+
+  .categories-header {
+    margin-bottom: 1rem;
+  }
+
+  .categories-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .categories-header a {
+    font-size: 0.875rem;
+  }
+
+  .category-card {
+    height: 18.75rem;
+    border-radius: 1rem;
+  }
+
+  .category-overlay {
+    padding: 1rem;
+  }
+
+  .category-overlay span {
+    font-size: 1rem;
   }
 }

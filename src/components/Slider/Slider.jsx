@@ -5,21 +5,30 @@ import "./Slider.css";
 function Slider({ children }) {
   const sliderRef = useRef(null);
 
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
+  const scroll = (direction) => {
+    if (!sliderRef.current) return;
 
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
+    const container = sliderRef.current;
+    const firstItem = container.querySelector(".slider-item");
+
+    if (!firstItem) return;
+
+    const gap = parseFloat(getComputedStyle(container.querySelector(".slider-track")).gap) || 0;
+    const scrollAmount = firstItem.offsetWidth + gap;
+
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   return (
     <div className="slider">
-      <button className="slider-btn prev" onClick={scrollLeft}>
+      <button
+        className="slider-btn prev"
+        onClick={() => scroll("left")}
+        aria-label="Previous"
+      >
         <ChevronLeft />
       </button>
 
@@ -31,11 +40,19 @@ function Slider({ children }) {
                   {child}
                 </div>
               ))
-            : children}
+            : (
+              <div className="slider-item">
+                {children}
+              </div>
+            )}
         </div>
       </div>
 
-      <button className="slider-btn next" onClick={scrollRight}>
+      <button
+        className="slider-btn next"
+        onClick={() => scroll("right")}
+        aria-label="Next"
+      >
         <ChevronRight />
       </button>
     </div>

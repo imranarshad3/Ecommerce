@@ -1,11 +1,12 @@
 .category-card {
   position: relative;
+  width: 100%;
   height: 360px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 20px;
   background: #eeeef5;
-  scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 .category-card-image {
@@ -49,7 +50,6 @@
 
 @media (max-width: 850px) {
   .category-card {
-    width: 250px;
     height: 320px;
   }
 
@@ -60,7 +60,6 @@
 
 @media (max-width: 550px) {
   .category-card {
-    width: 220px;
     height: 290px;
     border-radius: 16px;
   }
