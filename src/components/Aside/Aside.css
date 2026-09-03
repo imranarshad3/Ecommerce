@@ -1,0 +1,147 @@
+.filter-aside {
+  width: 240px;
+  background-color: #eef2ff;
+  padding: 24px 20px;
+  border-radius: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.filter-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.chip button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #64748b;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #334155;
+}
+
+.checkbox-label input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.price-slider {
+  width: 100%;
+  accent-color: #ffffff;
+}
+
+.size-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.size-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.size-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.color-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-val);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.color-btn.active {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-inputs input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #ffffff;
+  outline: none;
+}
+
+.price-inputs input:focus {
+  border-color: #2563eb;
+}
