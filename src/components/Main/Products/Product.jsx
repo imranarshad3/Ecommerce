@@ -56,10 +56,10 @@ function Product() {
         {products.map((product) => (
           <ProductCard
             key={product.id}
-            rating={product.rating}
-            name={product.name}
             image={product.image}
-            category={product.category.toUpperCase()}
+            name={product.name}
+            category={product.category}
+            rating={product.rating}
             price={product.price}
             oldPrice={product.oldPrice}
           />

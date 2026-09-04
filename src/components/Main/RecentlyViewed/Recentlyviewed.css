@@ -1,0 +1,51 @@
+.recently-view {
+  width: 100%;
+  max-width: 1232px;
+  padding-top: 64px;
+}
+
+.main-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 24px;
+}
+
+.main-div h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  color: #111;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+}
+
+.products > div, 
+.product-card { 
+  width: 280px;   
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.products img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-info,
+.products .card-details {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

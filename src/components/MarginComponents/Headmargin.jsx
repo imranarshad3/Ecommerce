@@ -1,15 +1,16 @@
-import React from 'react'
-import './Headmargin.css'
+import React from 'react';
+import './Headmargin.css';
 
-function Headmargin({total_pro}) {
+function Headmargin({ total_pro }) {
   return (
     <section className="head-margin">
-        <p>
-            <a href="/all" className="allcollection">All Collections</a>
-            <p id='t-line'> {total_pro} Products</p>
-        </p>
+      <div className="head-margin-container">
+        <a href="/all" className="allcollection">All Collections</a>
+        <span id="t-line">{total_pro} Products</span>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Headmargin
+export default Headmargin;
+
