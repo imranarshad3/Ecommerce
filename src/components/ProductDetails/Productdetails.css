@@ -1,30 +1,3 @@
-/* .bread-crumbs{
-    padding: 32px 24px 16px 24px;
-}
-.navbar{
-    display: flex;
-    gap: 8px;
-}
-
-.link{
-    display: flex;
-    font-weight: 400;
-    size: 16px;
-    line-height: 24px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-}
-
-.icon {
-    display: flex;
-    align-items: center;
-} */
-
-
-/* Base Page Styling */
 .product-page {
   margin: 0 auto;
   padding: 24px 16px;
@@ -32,7 +5,6 @@
   color: #333333;
 }
 
-/* Breadcrumbs */
 .bread-crumbs {
   margin-bottom: 28px;
 }
@@ -123,9 +95,10 @@
 
 .main-image {
   width: 100%;
-  height: 100%;
+  height: 600px;
   object-fit: cover;
   display: block;
+  
 }
 
 .zoom-btn {
@@ -368,4 +341,115 @@
   color: #555555;
 }
 
+
+
+.details-section {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .details-grid {
+    grid-template-columns: 0.35fr 0.65fr;
+    gap: 48px;
+  }
+}
+
+.details-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-heading {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.details-subtext {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 24px 0;
+}
+
+.details-image-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.details-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  background-color: #f0f5ff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: left;
+}
+
+.accordion-header:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.accordion-content {
+  padding: 0 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.accordion-content p {
+  margin: 0 0 16px 0;
+}
+.details-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.details-list li {
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+.details-list li:last-child {
+  margin-bottom: 0;
+}
 
